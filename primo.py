@@ -183,6 +183,7 @@ class Process(object):
         if options.debug:
             print('subprocess:', str(args.getvalue()))
 
+        print('Running process: ', str(args.getvalue()))
         self.process_obj = subprocess.Popen(shlex.split(str(args.getvalue())), executable=bin, cwd=self.cwd, stdin=_in, stdout=_out, env=self.environ)
 
         # TODO: everything here is kept in memory during the operation
